@@ -13101,7 +13101,7 @@ All you have to know is how to speak the Python language.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
@@ -13273,7 +13273,7 @@ Hint: Answer is in note 1.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#let us check the types</span>
@@ -13291,7 +13291,7 @@ Hint: Answer is in note 1.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[87]:</div>
 
 
 
@@ -13764,9 +13764,17 @@ perisplasm
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lists-and-Loops">Lists and Loops<a class="anchor-link" href="#Lists-and-Loops">&#182;</a></h3><p>Subsequent codelines will teach us a bit about lists and for loops and after that we will jump into tasks.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># vowels list</span>
@@ -13809,21 +13817,51 @@ The index of i: 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remove first occurence of i</span>
 <span class="n">vowels</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+
+<span class="c1"># Let us print the vowels one in a line</span>
+<span class="c1"># One way to print all the vowels is as follows</span>
+
+<span class="c1"># loop through list of vowels </span>
+<span class="c1"># print each vowel</span>
+<span class="k">for</span> <span class="n">vowel</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vowel</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a
+e
+o
+i
+u
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated vowels:&quot;</span><span class="p">,</span><span class="n">vowels</span><span class="p">)</span>
@@ -13981,9 +14019,41 @@ Localization Sites:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definitions(revisited):</p>
+<ul>
+<li>methods/functions - by invoking them(calling) you are expecting certain behavior<ul>
+<li><code>print(argument)</code> - function <em>print</em> takes <em>argument</em> of type <em>str</em>(or implicitly converts any other type to str)</li>
+</ul>
+</li>
+<li><p><code>DataFrame()</code> - non-primitive data type(provided by <code>pandas</code>), if the data type is provided by another library we must import it</p>
+<ul>
+<li>the process of <code>df = DataFrame(arguments)</code> is called initialization</li>
+<li>according to <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">documentation</a> DataFrame takes 5 arguments during initialization</li>
+</ul>
+</li>
+<li><p><strong>But as biologists we need to remember 2 arguments! <code>data</code> and <code>columns</code> - for assigning the names of columns!</strong></p>
+<ul>
+<li>E.g. <code>df = DataFrame(data=["cp","mb","imL"],columns=["Sites"])</code> </li>
+<li>assign df to value of type  DataFrame</li>
+<li>with arguments data and columns where<ul>
+<li><code>data</code> is of type <code>list</code></li>
+<li><code>columns</code> is of type <code>list</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Even more important method is going to be <code>read_csv(filename, column_names)</code></strong></li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a DataFrame</span>
@@ -14001,7 +14071,7 @@ Localization Sites:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[68]:</div>
+    <div class="prompt output_prompt">Out[84]:</div>
 
 
 
@@ -14170,7 +14240,7 @@ Localization Sites:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another way of creating DataFrame from csv file</span>
@@ -14188,7 +14258,180 @@ Localization Sites:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[77]:</div>
+    <div class="prompt output_prompt">Out[78]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sepal Length</th>
+      <th>Sepal Width</th>
+      <th>Petal Length</th>
+      <th>Petal Width</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also load specific function from a given library. E.g.:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">read_csv</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create variable filename</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;datasets/iris.csv&quot;</span>
+<span class="n">df_iris</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sepal Length&quot;</span><span class="p">,</span><span class="s2">&quot;Sepal Width&quot;</span><span class="p">,</span><span class="s2">&quot;Petal Length&quot;</span><span class="p">,</span><span class="s2">&quot;Petal Width&quot;</span><span class="p">,</span> <span class="s2">&quot;Class&quot;</span><span class="p">])</span>
+<span class="n">df_iris</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[83]:</div>
 
 
 
@@ -14321,16 +14564,39 @@ Localization Sites:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># iris dataframe is continued in the next ipynb notebook</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Tasks-to-try-at-home---Optional:">Tasks to try at home - Optional:<a class="anchor-link" href="#Tasks-to-try-at-home---Optional:">&#182;</a></h3><ul>
+<li><p><strong>Task 5. Animals listed in a dataframe:</strong></p>
+<ul>
+<li>User inputs the quantity of animals and based on that enter animal species one by one.</li>
+<li>Program then saves the entered values in the list and converts it into dataframe.</li>
+<li>Output should like the dataframe above.</li>
+</ul>
+</li>
+<li><p><strong>Task 6*. Challenging task - 2D user dataframe.</strong></p>
+<ul>
+<li>User inputs quantity of users and based on the quantity enter Names, Age and Matrikelnummer.</li>
+<li>Program then saves the entered values into the list and converts it into dataframe.</li>
+<li>Output should look like 2D list section of DataFrame introduction.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
     </div>
   </div>
